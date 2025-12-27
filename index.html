@@ -96,6 +96,23 @@
             padding: 20px;
         }
 
+        .channel-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .channel-info h2 {
+            color: white;
+            margin-bottom: 5px;
+            font-size: 2rem;
+        }
+
+        .channel-info p {
+            color: var(--accent-yellow);
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
         /* Laatste Video Sectie (Rood) */
         .video-card {
             background: var(--card-bg);
@@ -154,7 +171,7 @@
             text-decoration: none;
             border-radius: 50px;
             font-weight: 700;
-            margin: 20px 0;
+            margin: 10px 0;
             transition: 0.3s;
             box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
         }
@@ -176,6 +193,7 @@
             header h1 { font-size: 1.8rem; }
             nav a { padding: 12px 10px; font-size: 10px; flex-grow: 1; }
             .logo-container img { width: 90px; height: 90px; }
+            .channel-info h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -199,8 +217,12 @@
         <img src="banner.png" alt="CtrlAltKaas Banner" class="banner-image">
     </div>
 
-    <div class="container" style="text-align: center;">
-        <a href="https://YouTube.com/@CtrlAltKaas" target="_blank" class="btn-youtube">Abonneer op YouTube</a>
+    <div class="container">
+        <div class="channel-info">
+            <h2>CtrlAltKaas</h2>
+            <p>Abonneer voor KAAS EN CONTENT, wat wil je nog meer?</p>
+            <a href="https://YouTube.com/@CtrlAltKaas?sub_confirmation=1" target="_blank" class="btn-youtube">Abonneer op YouTube</a>
+        </div>
     </div>
 
     <div class="container">
