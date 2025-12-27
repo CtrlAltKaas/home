@@ -12,11 +12,12 @@
             --card-bg: #1b262f;
             --accent-blue: #00d4ff;
             --accent-yellow: #ffcc00;
+            --accent-red: #ff4747;
             --text-color: #e0e0e0;
         }
 
         body {
-            font-family: 'Comfortaa', cursive; /* Comfortaa toegepast op de hele site */
+            font-family: 'Comfortaa', cursive;
             background-color: var(--dark-bg);
             color: var(--text-color);
             margin: 0;
@@ -33,23 +34,24 @@
         .logo-container img {
             width: 120px;
             height: 120px;
-            border-radius: 50%; /* Houdt de afbeelding zelf rond */
-            border: none; /* Blauwe cirkel verwijderd */
+            border-radius: 50%;
+            border: none;
             margin-bottom: 10px;
         }
 
         header h1 {
             margin: 10px 0;
             font-size: 2.5rem;
-            letter-spacing: 1px;
             color: white;
             font-weight: 700;
         }
 
+        /* Verbeterd Mobiel Menu */
         nav {
             display: flex;
             justify-content: center;
-            background: rgba(27, 38, 47, 0.9);
+            flex-wrap: wrap; 
+            background: rgba(27, 38, 47, 0.95);
             border-top: 1px solid #2c3e50;
             border-bottom: 2px solid var(--accent-blue);
             position: sticky;
@@ -59,12 +61,13 @@
 
         nav a {
             color: white;
-            padding: 15px 25px;
+            padding: 15px 18px;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12px;
             transition: 0.3s;
+            text-align: center;
         }
 
         nav a:hover {
@@ -76,31 +79,15 @@
             width: 100%;
             max-width: 1000px;
             margin: 20px auto;
-            padding: 0 20px;
+            padding: 0 15px;
             box-sizing: border-box;
         }
 
         .banner-image {
             width: 100%;
-            border-radius: 20px; /* Iets ronder voor Comfortaa stijl */
+            border-radius: 20px;
             border: 1px solid #34495e;
             display: block;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .hero h2 {
-            color: white;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .hero p {
-            color: var(--accent-blue);
-            font-size: 1.1rem;
         }
 
         .container {
@@ -109,25 +96,54 @@
             padding: 20px;
         }
 
-        .project-card {
+        /* Laatste Video Sectie (Rood) */
+        .video-card {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px; /* Rondere hoeken */
-            border-left: 5px solid var(--accent-yellow);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 8px solid var(--accent-red);
             margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(255, 71, 71, 0.1);
         }
 
-        .project-card h3 {
-            color: var(--accent-yellow);
+        .video-card h3 {
+            color: var(--accent-red);
             margin-top: 0;
             font-weight: 700;
         }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Sneakpeak Sectie (Blauw) */
+        .sneakpeak-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 8px solid var(--accent-blue);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .sneakpeak-card h3 {
+            color: var(--accent-blue);
+            margin-top: 0;
+            font-weight: 700;
         }
 
         .btn-youtube {
@@ -136,9 +152,9 @@
             color: white;
             padding: 12px 25px;
             text-decoration: none;
-            border-radius: 50px; /* Volledig ronde knop voor Comfortaa look */
+            border-radius: 50px;
             font-weight: 700;
-            margin-top: 15px;
+            margin: 20px 0;
             transition: 0.3s;
             box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
         }
@@ -146,7 +162,20 @@
         .btn-youtube:hover {
             background: #cc0000;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-size: 0.8rem;
+        }
+
+        /* Mobiele aanpassingen */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { padding: 12px 10px; font-size: 10px; flex-grow: 1; }
+            .logo-container img { width: 90px; height: 90px; }
         }
     </style>
 </head>
@@ -161,7 +190,7 @@
 
     <nav>
         <a href="#">Home</a>
-        <a href="#">Video's</a>
+        <a href="https://YouTube.com/@CtrlAltKaas">Video's</a>
         <a href="#">Over mij</a>
         <a href="#">Contact</a>
     </nav>
@@ -170,16 +199,22 @@
         <img src="banner.png" alt="CtrlAltKaas Banner" class="banner-image">
     </div>
 
-    <div class="hero">
-        <h2>Welkom op de kaas-tech hub!</h2>
-        <p>Abonnee worden op YouTube? Klik op de knop hieronder!</p>
-        <a href="https://YouTube.com/@CtrlAltKaas" target="_blank" class="btn-youtube">Bezoek mijn YouTube Kanaal</a>
+    <div class="container" style="text-align: center;">
+        <a href="https://YouTube.com/@CtrlAltKaas" target="_blank" class="btn-youtube">Abonneer op YouTube</a>
     </div>
 
     <div class="container">
-        <div class="project-card">
-            <h3>Mijn Eerste Project</h3>
-            <p>Leuk dat je er bent! Hier op de officiële CtrlAltKaas website ga ik later mijn projecten, setups en scripts delen die ik in mijn video's gebruik.</p>
+        <div class="video-card">
+            <h3>Laatste Video</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=CtrlAltKaas" allowfullscreen></iframe>
+            </div>
+            <p>Check hier mijn allernieuwste video direct vanaf het kanaal!</p>
+        </div>
+
+        <div class="sneakpeak-card">
+            <h3>Sneakpeaks</h3>
+            <p>Binnenkort komen er vette nieuwe projecten aan. Houd deze plek in de gaten voor exclusieve previews van waar ik achter de schermen aan werk!</p>
         </div>
     </div>
 
