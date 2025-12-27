@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CtrlAltKaas - Officiële Website</title>
+    <style>
+        /* Kleurenpalet gebaseerd op CtrlAltKaas logo */
+        :root {
+            --dark-bg: #121921;
+            --card-bg: #1b262f;
+            --accent-blue: #00d4ff;
+            --accent-yellow: #ffcc00;
+            --text-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark-bg);
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .logo-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-blue);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 10px 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(27, 38, 47, 0.9);
+            border-top: 1px solid #2c3e50;
+            border-bottom: 2px solid var(--accent-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-yellow);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .banner-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-image {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid #34495e;
+            display: block;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--accent-yellow);
+            margin-bottom: 30px;
+        }
+
+        .project-card h3 {
+            color: var(--accent-yellow);
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .btn-youtube {
+            display: inline-block;
+            background: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-youtube:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="CtrlAltKaas Logo">
+        </div>
+        <h1>CtrlAltKaas</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Video's</a>
+        <a href="#">Over mij</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="banner-container">
+        <img src="banner.jpg" alt="CtrlAltKaas Banner" class="banner-image">
+    </div>
+
+    <div class="hero">
+        <h2>Welkom op de kaas-tech hub!</h2>
+        <p>Abonnee worden op YouTube? Klik op de knop hieronder!</p>
+        <a href="https://YouTube.com/@CtrlAltKaas" target="_blank" class="btn-youtube">Bezoek mijn YouTube Kanaal</a>
+    </div>
+
+    <div class="container">
+        <div class="project-card">
+            <h3>Mijn Eerste Project</h3>
+            <p>Leuk dat je er bent! Hier op de officiële CtrlAltKaas website ga ik later mijn projecten, setups en scripts delen die ik in mijn video's gebruik.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Gemaakt door CtrlAltKaas &copy; 2025</p>
+    </footer>
+
+</body>
+  </html>
+  
