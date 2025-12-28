@@ -32,7 +32,7 @@
 
         header h1 {
             margin: 10px 0;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: white;
             font-weight: 700;
         }
@@ -66,7 +66,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             padding: 40px 20px;
         }
@@ -81,8 +81,8 @@
         /* Video Grid */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
         }
 
         .video-item {
@@ -90,45 +90,48 @@
             border-radius: 20px;
             overflow: hidden;
             border-bottom: 4px solid var(--accent-red);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            color: inherit;
-            display: block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        .video-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        /* Responsive Embed Container */
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            background: #000;
         }
 
-        .video-thumbnail {
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            aspect-ratio: 16 / 9;
-            background-size: cover;
-            background-position: center;
+            height: 100%;
+            border: 0;
         }
 
         .video-info {
-            padding: 15px;
+            padding: 20px;
         }
 
         .video-date {
             font-size: 0.75rem;
             color: var(--accent-blue);
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             display: block;
         }
 
         .video-info h3 {
-            margin: 0 0 10px 0;
-            font-size: 1rem;
+            margin: 0 0 12px 0;
+            font-size: 1.1rem;
             color: white;
             line-height: 1.3;
         }
 
         .video-info p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #bdc3c7;
             margin: 0;
         }
@@ -141,8 +144,9 @@
         }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 1.5rem; }
+            header h1 { font-size: 1.8rem; }
             nav a { padding: 12px 10px; font-size: 10px; }
+            .video-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -164,59 +168,71 @@
         
         <div class="video-grid">
             
-            <a href="https://www.youtube.com/watch?v=9n_FC0mMsJY" target="_blank" class="video-item">
-                <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/9n_FC0mMsJY/maxresdefault.jpg');"></div>
+            <div class="video-item">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/9n_FC0mMsJY" allowfullscreen></iframe>
+                </div>
                 <div class="video-info">
                     <span class="video-date">5 december 2025</span>
                     <h3>VERSTOPPEN ALS BLOK IN MINECRAFT!</h3>
                     <p>Samen met vrienden spelen we Blockhunt! Wie kan het beste verstoppen als een boekenkast of een blaadje?</p>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://www.youtube.com/watch?v=DMoOp_U_Qps" target="_blank" class="video-item">
-                <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/DMoOp_U_Qps/maxresdefault.jpg');"></div>
+            <div class="video-item">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/DMoOp_U_Qps" allowfullscreen></iframe>
+                </div>
                 <div class="video-info">
                     <span class="video-date">22 november 2025</span>
                     <h3>POLITIE BUREAU OVERVALLEN IN EMERCY HAMBURG</h3>
                     <p>Chaos in Hamburg! We proberen het bureau te overvallen, maar eindigen helaas in de bak.</p>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://www.youtube.com/watch?v=0DmkgKHIfrM" target="_blank" class="video-item">
-                <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/0DmkgKHIfrM/maxresdefault.jpg');"></div>
+            <div class="video-item">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/0DmkgKHIfrM" allowfullscreen></iframe>
+                </div>
                 <div class="video-info">
                     <span class="video-date">9 november 2025</span>
                     <h3>VERBOUWEN IN MIJN BIOSCOOP</h3>
                     <p>De Snuggelcoop krijgt een update! Popcornmachines, koelkasten en een nieuwe indeling.</p>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://www.youtube.com/watch?v=vKlrD6efDrA" target="_blank" class="video-item">
-                <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/vKlrD6efDrA/maxresdefault.jpg');"></div>
+            <div class="video-item">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/vKlrD6efDrA" allowfullscreen></iframe>
+                </div>
                 <div class="video-info">
                     <span class="video-date">4 november 2025</span>
                     <h3>IK OPEN MIJN EIGEN BIOSCOOP!</h3>
                     <p>De start van een nieuwe serie: Ultimate Theater Simulator. Gaan we de Snuggelcoop groot maken?</p>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://www.youtube.com/watch?v=o5Vkz1x_htU" target="_blank" class="video-item">
-                <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/o5Vkz1x_htU/maxresdefault.jpg');"></div>
+            <div class="video-item">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/o5Vkz1x_htU" allowfullscreen></iframe>
+                </div>
                 <div class="video-info">
                     <span class="video-date">2 november 2025</span>
                     <h3>IEDEREEN BOMBARDEREN IN PILFERING PIRATES</h3>
                     <p>Roblox actie op volle zee! Schepen slopen en schatkisten stelen in deze epische battle.</p>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://www.youtube.com/watch?v=XopjjcLY8G4" target="_blank" class="video-item">
-                <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/XopjjcLY8G4/maxresdefault.jpg');"></div>
+            <div class="video-item">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/XopjjcLY8G4" allowfullscreen></iframe>
+                </div>
                 <div class="video-info">
                     <span class="video-date">19 oktober 2025</span>
                     <h3>IK SPEEL BURGER TYCOON IN ROBLOX</h3>
                     <p>Van aardappels schillen naar het grootste burgerrestaurant ooit. Mijn eerste NL video op dit kanaal!</p>
                 </div>
-            </a>
+            </div>
 
         </div>
 
