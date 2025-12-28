@@ -29,27 +29,18 @@
 
         header {
             background-color: var(--dark-bg);
-            padding: 40px 20px 20px 20px;
+            padding: 30px 20px 10px 20px;
             text-align: center;
         }
 
-        .header-logo {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid var(--accent-blue);
-            margin-bottom: 15px;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
-        }
-
         header h1 {
-            margin: 0;
-            font-size: 2.2rem;
+            margin: 10px 0;
+            font-size: 2rem;
             color: white;
             font-weight: 700;
         }
 
-        /* Navigatie Menu */
+        /* Navigatie Menu - De moderne balk met blauwe onderlijn */
         nav {
             display: flex;
             justify-content: center;
@@ -80,9 +71,6 @@
         .hero {
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(rgba(18, 25, 33, 0.8), rgba(18, 25, 33, 0.8)), url('banner.png'); /* Optioneel als je een banner hebt */
-            background-size: cover;
-            background-position: center;
         }
 
         .hero h2 {
@@ -119,7 +107,8 @@
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
         .btn {
@@ -146,7 +135,7 @@
         }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
+            header h1 { font-size: 1.5rem; }
             nav a { padding: 12px 10px; font-size: 10px; }
         }
     </style>
@@ -154,24 +143,23 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="CtrlAltKaas Logo" class="header-logo">
         <h1>CtrlAltKaas</h1>
     </header>
 
     <nav>
         <a href="index.html" class="active">Home</a>
         <a href="videos.html">Video's</a>
-        <a href="overmij.html">Over mij</a>
-        <a href="contact.html">Contact</a>
+        <a href="#">Over mij</a>
+        <a href="#">Contact</a>
     </nav>
 
-    <section class="hero">
-        <h2>Welkom bij de kaas-club!</h2>
-        <p>Ik ben een developer in de dop en maak content over gaming, tech en alles wat ik leuk vind.</p>
-        <a href="videos.html" class="btn">Bekijk mijn video's</a>
-    </section>
-
     <div class="container">
+        <section class="hero">
+            <h2>Welkom bij de kaas-club!</h2>
+            <p>Ik ben een developer in de dop en maak content over gaming, tech en alles wat ik leuk vind.</p>
+            <a href="videos.html" class="btn">Bekijk mijn video's</a>
+        </section>
+
         <div class="grid">
             <div class="card">
                 <h3>YouTube</h3>
