@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - CtrlAltKaas</title>
-    
-    <link rel="icon" type="image/png" href="logo.png">
-
+    <title>CtrlAltKaas - Officiële Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        /* Kleurenpalet gebaseerd op CtrlAltKaas logo */
         :root {
             --dark-bg: #121921;
             --card-bg: #1b262f;
@@ -29,18 +27,26 @@
 
         header {
             background-color: var(--dark-bg);
-            padding: 30px 20px 10px 20px;
+            padding: 40px 20px 20px 20px;
             text-align: center;
+        }
+
+        .logo-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: none;
+            margin-bottom: 10px;
         }
 
         header h1 {
             margin: 10px 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: white;
             font-weight: 700;
         }
 
-        /* Navigatie Menu - De moderne balk met blauwe onderlijn */
+        /* Navigatie Menu */
         nav {
             display: flex;
             justify-content: center;
@@ -61,70 +67,139 @@
             font-weight: 700;
             font-size: 12px;
             transition: 0.3s;
+            text-align: center;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: var(--accent-yellow);
             background: rgba(255, 255, 255, 0.05);
         }
 
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
+        .banner-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+            box-sizing: border-box;
         }
 
-        .hero h2 {
-            font-size: 2.5rem;
-            color: var(--accent-yellow);
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
+        .banner-image {
+            width: 100%;
+            border-radius: 20px;
+            border: 1px solid #34495e;
+            display: block;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
+        .channel-info {
             text-align: center;
-            border-bottom: 4px solid var(--accent-blue);
-            transition: 0.3s;
+            margin-bottom: 30px;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        .channel-info h2 {
+            color: white;
+            margin-bottom: 5px;
+            font-size: 2.2rem;
         }
 
-        .btn {
+        /* De kanaalbeschrijving: Wit en kleiner */
+        .channel-info p {
+            color: #ffffff; 
+            font-size: 1rem;
+            margin-top: 0;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Video Sectie (Rood) */
+        .video-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 8px solid var(--accent-red);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(255, 71, 71, 0.1);
+        }
+
+        .video-card h3 {
+            color: var(--accent-red);
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        .video-card p {
+            color: var(--text-color);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+            margin-bottom: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Sneakpeak Sectie (Blauw) */
+        .sneakpeak-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 8px solid var(--accent-blue);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .sneakpeak-card h3 {
+            color: var(--accent-blue);
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        .sneakpeak-card p {
+            color: var(--text-color);
+        }
+
+        .sneakpeak-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            display: block;
+            margin: 15px 0;
+            border: 2px solid var(--accent-blue);
+        }
+
+        .btn-youtube {
             display: inline-block;
-            background: var(--accent-blue);
-            color: var(--dark-bg);
+            background: #ff0000;
+            color: white;
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 700;
-            margin-top: 20px;
+            margin: 10px 0;
             transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
         }
 
-        .btn:hover {
-            background: var(--accent-yellow);
+        .btn-youtube:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
         }
 
         footer {
@@ -134,43 +209,58 @@
             font-size: 0.8rem;
         }
 
+        /* Mobiele aanpassingen */
         @media (max-width: 600px) {
-            header h1 { font-size: 1.5rem; }
-            nav a { padding: 12px 10px; font-size: 10px; }
+            header h1 { font-size: 1.8rem; }
+            nav a { padding: 12px 8px; font-size: 10px; flex-grow: 1; }
+            .logo-container img { width: 90px; height: 90px; }
+            .channel-info h2 { font-size: 1.7rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="CtrlAltKaas Logo">
+        </div>
         <h1>CtrlAltKaas</h1>
     </header>
 
     <nav>
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="videos.html">Video's</a>
         <a href="#">Over mij</a>
         <a href="#">Contact</a>
     </nav>
 
-    <div class="container">
-        <section class="hero">
-            <h2>Welkom bij de kaas-club!</h2>
-            <p>Ik ben een developer in de dop en maak content over gaming, tech en alles wat ik leuk vind.</p>
-            <a href="videos.html" class="btn">Bekijk mijn video's</a>
-        </section>
+    <div class="banner-container">
+        <img src="banner.png" alt="CtrlAltKaas Banner" class="banner-image">
+    </div>
 
-        <div class="grid">
-            <div class="card">
-                <h3>YouTube</h3>
-                <p>Check mijn nieuwste video's over Minecraft, Roblox en meer!</p>
-                <a href="https://youtube.com/@CtrlAltKaas" target="_blank" class="btn">Bezoek kanaal</a>
+    <div class="container">
+        <div class="channel-info">
+            <h2>CtrlAltKaas</h2>
+            <p>Abonneer voor KAAS EN CONTENT, wat wil je nog meer?</p>
+            <a href="https://YouTube.com/@CtrlAltKaas?sub_confirmation=1" target="_blank" class="btn-youtube">Abonneer op YouTube</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="video-card">
+            <h3>Laatste Video</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/2n9dPKYdzWQ" allowfullscreen></iframe>
             </div>
-            <div class="card" style="border-color: var(--accent-red);">
-                <h3>Projecten</h3>
-                <p>Nieuwsgierig naar wat ik allemaal bouw? Bekijk mijn creaties.</p>
-                <a href="#" class="btn" style="background: var(--accent-red); color: white;">Bekijk meer</a>
-            </div>
+            <p><strong>Minecraft Maar... Alles BEWEEGT!</strong></p>
+            <p>In deze video probeer ik Minecraft te spelen terwijl alle textures bewegen. Het is vreselijk cursed en ik word er helemaal misselijk van!</p>
+        </div>
+
+        <div class="sneakpeak-card">
+            <h3>Sneakpeaks</h3>
+            <p>Primeur! Hier is de thumbnail van mijn volgende video. Wat denk jij dat er gaat gebeuren?</p>
+            <img src="sneakpeak1.png" alt="Volgende video sneakpeak" class="sneakpeak-image">
+            <p>Houd de website in de gaten voor meer updates over komende content!</p>
         </div>
     </div>
 
