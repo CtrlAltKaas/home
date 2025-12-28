@@ -46,7 +46,7 @@
             font-weight: 700;
         }
 
-        /* Verbeterd Mobiel Menu */
+        /* Navigatie Menu */
         nav {
             display: flex;
             justify-content: center;
@@ -104,16 +104,17 @@
         .channel-info h2 {
             color: white;
             margin-bottom: 5px;
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
 
         .channel-info p {
             color: var(--accent-yellow);
             font-size: 1.2rem;
             margin-top: 0;
+            font-weight: 400;
         }
 
-        /* Laatste Video Sectie (Rood) */
+        /* Video Sectie (Rood) */
         .video-card {
             background: var(--card-bg);
             padding: 25px;
@@ -136,6 +137,7 @@
             overflow: hidden;
             border-radius: 12px;
             background: #000;
+            margin-bottom: 15px;
         }
 
         .video-container iframe {
@@ -191,9 +193,9 @@
         /* Mobiele aanpassingen */
         @media (max-width: 600px) {
             header h1 { font-size: 1.8rem; }
-            nav a { padding: 12px 10px; font-size: 10px; flex-grow: 1; }
+            nav a { padding: 12px 8px; font-size: 10px; flex-grow: 1; }
             .logo-container img { width: 90px; height: 90px; }
-            .channel-info h2 { font-size: 1.5rem; }
+            .channel-info h2 { font-size: 1.7rem; }
         }
     </style>
 </head>
@@ -229,9 +231,10 @@
         <div class="video-card">
             <h3>Laatste Video</h3>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=CtrlAltKaas" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/2n9dPKYdzWQ" allowfullscreen></iframe>
             </div>
-            <p>Check hier mijn allernieuwste video direct vanaf het kanaal!</p>
+            <p><strong>Minecraft Maar... Alles BEWEEGT!</strong></p>
+            <p>In deze video probeer ik Minecraft te spelen terwijl alle textures bewegen. Het is vreselijk curs en ik word er helemaal misselijk van!</p>
         </div>
 
         <div class="sneakpeak-card">
