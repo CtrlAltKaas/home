@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video's - CtrlAltKaas</title>
+    
+    <link rel="icon" type="image/png" href="logo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -26,12 +29,22 @@
 
         header {
             background-color: var(--dark-bg);
-            padding: 30px 20px 10px 20px;
+            padding: 40px 20px 20px 20px;
             text-align: center;
         }
 
+        /* Logo stijl */
+        .header-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
         header h1 {
-            margin: 10px 0;
+            margin: 0;
             font-size: 2.2rem;
             color: white;
             font-weight: 700;
@@ -93,10 +106,9 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Responsive Embed Container */
         .video-embed {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             background: #000;
@@ -153,14 +165,15 @@
 <body>
 
     <header>
+        <img src="logo.png" alt="CtrlAltKaas Logo" class="header-logo">
         <h1>CtrlAltKaas Video's</h1>
     </header>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="videos.html" class="active">Video's</a>
-        <a href="#">Over mij</a>
-        <a href="#">Contact</a>
+        <a href="overmij.html">Over mij</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <div class="container">
@@ -208,7 +221,7 @@
                 <div class="video-info">
                     <span class="video-date">4 november 2025</span>
                     <h3>IK OPEN MIJN EIGEN BIOSCOOP!</h3>
-                    <p>De start van een nieuwe serie: Ultimate Theater Simulator. Gaan we de Snuggelcoop groot maken?</p>
+                    <p>De start van een nieuwe serie: Ultimate Theater Simulator.</p>
                 </div>
             </div>
 
@@ -219,7 +232,7 @@
                 <div class="video-info">
                     <span class="video-date">2 november 2025</span>
                     <h3>IEDEREEN BOMBARDEREN IN PILFERING PIRATES</h3>
-                    <p>Roblox actie op volle zee! Schepen slopen en schatkisten stelen in deze epische battle.</p>
+                    <p>Roblox actie op volle zee! Schepen slopen en schatkisten stelen.</p>
                 </div>
             </div>
 
@@ -230,7 +243,7 @@
                 <div class="video-info">
                     <span class="video-date">19 oktober 2025</span>
                     <h3>IK SPEEL BURGER TYCOON IN ROBLOX</h3>
-                    <p>Van aardappels schillen naar het grootste burgerrestaurant ooit. Mijn eerste NL video op dit kanaal!</p>
+                    <p>Mijn eerste Nederlandse video op dit kanaal!</p>
                 </div>
             </div>
 
